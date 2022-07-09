@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "面试吧",
+  "usingComponents": {
+    "uni-auxiliary": "/src/components/uni-auxiliary/uni-auxiliary",
+    "uni-section": "/src/components/uni-section/uni-section"
+  }
+}

@@ -76,13 +76,11 @@
 		}
 	}
 </script>
-<style lang="scss" >
+<style lang="scss"  scoped>
 	$uni-primary: #2979ff !default;
 
 	.uni-section {
-		background-color: #fff;
-		// overflow: hidden;
-		margin-top: 10px;
+		border-radius: $border-radius-size;
 	}
 	.uni-section-header {
 		position: relative;

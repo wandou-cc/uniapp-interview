@@ -1,0 +1,12 @@
+	
+page{
+	background-color: $base-background-color;
+}
+
+.home-box {
+
+	height: 100%;
+	border-radius: $border-radius-size;
+	box-shadow: 0 0 $border-radius-size 0 $box-shadow-color;
+	background-color: $box-background-color;
+}

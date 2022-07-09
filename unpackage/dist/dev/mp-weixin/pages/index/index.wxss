@@ -27,19 +27,6 @@
 .cc-home.data-v-57280228 {
   padding: 20rpx;
 }
-.uni-margin-wrap.data-v-57280228 {
-  width: 100%;
-  margin-bottom: 20rpx;
-}
-.uni-margin-wrap .swiper.data-v-57280228 {
-  height: 250rpx;
-}
-.uni-margin-wrap .swiper-item.data-v-57280228 {
-  display: block;
-  height: 300rpx;
-  line-height: 300rpx;
-  text-align: center;
-}
 .cc-home-top.data-v-57280228 {
   height: 300rpx;
   display: flex;
@@ -69,7 +56,14 @@
 .home-top-right .right-bottom-right.data-v-57280228 {
   flex: 1;
 }
-.data-v-57280228 .uni-noticebar {
-  border-radius: 15rpx;
+.section-body.data-v-57280228 {
+  padding: 10rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.auxiliary.data-v-57280228 {
+  width: calc(50% - 20rpx);
+  margin: 10rpx;
 }
 
