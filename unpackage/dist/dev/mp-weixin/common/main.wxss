@@ -1,0 +1,8 @@
+.home-box {
+	height: 100%;
+	border-radius: 15rpx;
+	box-shadow: 0 0 15rpx 0 #ccc;
+	background-color: #fff;
+}
+
+
