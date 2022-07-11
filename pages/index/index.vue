@@ -14,11 +14,12 @@
 		<!-- 中间高频配置 后期开发成为可配置 -->
 		<view class="cc-home-top">
 			<view class="home-top-left home-box ">
-				每日一题目
+				<!-- <uni-clock></uni-clock> -->
+				<!-- 图表 -->
 			</view>
 			<view class="home-top-right">
 				<view class="right-top home-box">
-					 签到
+					 <uni-sign-in></uni-sign-in>
 				</view>
 				<view class="right-bottom">
 					<view class="right-bottom-left home-box">
@@ -47,9 +48,11 @@
 	import uniSection from "@/components/uni-section/uni-section.vue";
 	import uniAuxiliary from "@/components/uni-auxiliary/uni-auxiliary.vue";
 	import uniSwiper from "@/components/uni-swiper/uni-swiper.vue";
+	import uniSignIn from "@/components/uni-sign-in/uni-sign-in.vue";
+	// import uniClock from "@/components/uni-clock/uni-clock.vue";
 	
 	export default {
-		components:{ uniAuxiliary, uniSection, uniSwiper },
+		components:{ uniAuxiliary, uniSection, uniSwiper, uniSignIn},
 		data(){
 			return {
 				auxiliaryList:[
@@ -151,7 +154,8 @@
 	}
 		
 	.home-top-right {
-		flex: 1;
+		// flex: 1;
+		width: 340rpx;
 		display:flex;
 		flex-direction: column;
 			

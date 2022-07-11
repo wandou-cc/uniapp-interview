@@ -5,7 +5,7 @@
             :duration="duration" >
             <swiper-item v-for="(item,index) in swiperList" :key="index">
                 <view class="swiper-item">
-                    <img :src="item.src" :alt="item.alt" style="width:100%;height:100%">
+                    <img :src="item.src" :alt="item.alt" class="swiper-img">
                 </view>
             </swiper-item>
         </swiper>
@@ -45,17 +45,22 @@ export default {
 .uni-margin-wrap {
 		width: 100%;
 		margin-bottom: 20rpx;
+        padding: 10rpx;
 		.swiper {
-			height: 280rpx;
+			height: 300rpx;
 		}
 		
 		.swiper-item {
 			display: block;
-			height: 300rpx;
-			line-height: 300rpx;
+			height: 100%;
 			text-align: center;
 			// border: 1rpx solid red;
 		}
 	}
+    .swiper-img {
+        height: 100%;
+        width: 100%;
+        border-radius: $border-radius-size;
+    }
 
 </style>

@@ -38,6 +38,8 @@
 		padding: 10rpx;
 		.aux-left {
 			flex: 70%;
+			display: flex;
+			align-items: center;
 		}
 		.aux-right {
 			flex: 1;

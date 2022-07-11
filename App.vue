@@ -5,14 +5,12 @@
 		},
 		onShow: function() {
 			console.log('App Show')
-			// this.getFont()
 		},
 		onHide: function() {
 			console.log('App Hide')
 		},
 			
 		methods:{
-				
 			// getFont(){
 			// 	console.log(111)
 			// 	uni.loadFontFace({
