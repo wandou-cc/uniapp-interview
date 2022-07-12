@@ -3,11 +3,16 @@
 
 		<!-- 轮播图 -->
 		<view>
-			<uni-swiper :swiperList='swiperList'></uni-swiper>
+			<unicloud-db v-slot:default="{data, loading, error, options}" collection="swiper">
+				<view v-if="error">{{error.message}}</view>
+				<view v-else>
+					<uni-swiper :swiperList='data'></uni-swiper>
+				</view>
+			</unicloud-db>
 		</view>
 		
 		<!-- 公告 -->
-		<view class='home-box'>
+		<view class='home-box notice-bar'>
 			<uni-notice-bar style='border-radius: 15rpx;' background-color='$box-background-color' color='teal' :speed='30' show-icon scrollable text="uni-app 版正式发布，开发一次，同时发布iOS、Android、H5、微信小程序、支付宝小程序、百度小程序、头条小程序等7大平台。" />
 		</view>
 		
@@ -50,6 +55,7 @@
 	import uniSwiper from "@/components/uni-swiper/uni-swiper.vue";
 	import uniSignIn from "@/components/uni-sign-in/uni-sign-in.vue";
 	// import uniClock from "@/components/uni-clock/uni-clock.vue";
+	const db = uniCloud.database()
 	
 	export default {
 		components:{ uniAuxiliary, uniSection, uniSwiper, uniSignIn},
@@ -89,49 +95,56 @@
 				],
 				swiperList:[
 					{
-						src:'http://img.7476.com/d/file/titlepic/2018-11-24/17/175328296.jpg',
+						src:"http://img.7476.com/d/file/titlepic/2018-11-24/17/175328296.jpg",
 						alt:"壁纸"
 					},
 					{
-						src:'http://img.7476.com/d/file/titlepic/2018-11-24/17/175328298.jpg',
+						src:"http://img.7476.com/d/file/titlepic/2018-11-24/17/175328298.jpg",
 						alt:"壁纸"
 					},
 					{
-						src:'http://img.7476.com/d/file/titlepic/2018-11-24/17/175331304.jpg',
+						src:"http://img.7476.com/d/file/titlepic/2018-11-24/17/175331304.jpg",
 						alt:"壁纸"
 					},
 					{
-						src:'http://img.7476.com/d/file/titlepic/2018-11-24/17/175342328.jpg',
+						src:"http://img.7476.com/d/file/titlepic/2018-11-24/17/175342328.jpg",
 						alt:"壁纸"
 					},
 					{
-						src:'http://img.7476.com/d/file/titlepic/2018-11-24/17/175334310.jpg',
+						src:"http://img.7476.com/d/file/titlepic/2018-11-24/17/175334310.jpg",
 						alt:"壁纸"
 					},
 					{
-						src:'http://img.7476.com/d/file/titlepic/2018-11-24/17/175334308.jpg',
+						src:"http://img.7476.com/d/file/titlepic/2018-11-24/17/175334308.jpg",
 						alt:"壁纸"
 					},
 					{
-						src:'http://img.7476.com/d/file/titlepic/2018-11-24/17/175335312.jpg',
+						src:"http://img.7476.com/d/file/titlepic/2018-11-24/17/175335312.jpg",
 						alt:"壁纸"
 					},
 					{
-						src:'http://img.7476.com/d/file/titlepic/2018-11-24/17/175341326.jpg',
+						src:"http://img.7476.com/d/file/titlepic/2018-11-24/17/175341326.jpg",
 						alt:"壁纸"
 					},
 					{
-						src:'http://img.7476.com/d/file/titlepic/2018-11-24/17/175330302.jpg',
+						src:"http://img.7476.com/d/file/titlepic/2018-11-24/17/175330302.jpg",
 						alt:"壁纸"
 					},
 					{
-						src:'http://img.7476.com/d/file/titlepic/2018-11-24/17/175335314.jpg',
+						src:"http://img.7476.com/d/file/titlepic/2018-11-24/17/175335314.jpg",
 						alt:"壁纸"
 					},
 					
 				]
 			}
+		},
+		
+		onShow() {
+			// db.collection("info").where("_id == '62cd25cef17d02000148abb7'").get().then(res=>{
+			// 	console.log(res)
+			// })
 		}
+		
 	}
 	
 </script>
@@ -141,6 +154,10 @@
 	.cc-home {
 		// background-color: #eee;
 		padding: 20rpx;
+	}
+	
+	.notice-bar {
+		margin-bottom: 20rpx;
 	}
 	
 	.cc-home-top {

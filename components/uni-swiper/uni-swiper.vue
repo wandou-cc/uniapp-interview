@@ -35,7 +35,18 @@ export default {
             type:Array,
             default:[]
         }
-    }
+    },
+		
+	watch:{
+			
+		swiperList:{
+				
+			handler(v){
+				console.log(v)
+			},
+			deep:true
+		}
+	}
 
 }
 </script>

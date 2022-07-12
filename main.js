@@ -4,6 +4,19 @@ import App from './App'
 import Vue from 'vue'
 Vue.config.productionTip = false
 App.mpType = 'app'
+
+
+uniCloud.addInterceptor('callFunction',{
+    success(res){
+        const {result}=res
+		console.log(result)
+        if(result.errCode!==0){
+            throw new Error(result.errMsg)
+        }
+    }
+})
+
+
 const app = new Vue({
     ...App
 })
